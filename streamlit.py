@@ -9,8 +9,7 @@ from datetime import datetime
 import warnings
 
 warnings.filterwarnings('ignore')
-
-df = pd.read_csv('C:\\Users\\corne\\Dropbox\\PythonScripts\\BSS Retail Data.csv')
+df = pd.read_csv('BSS Retail Data.csv')
 
 # Identify numeric and categorical variables
 numeric_vars = df.select_dtypes(include=['number']).columns.tolist()
