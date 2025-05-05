@@ -158,8 +158,7 @@ plt.xticks(rotation=90) # Rotate x-axis labels for better readability
 st.pyplot(fig)
 # Sales vs SKU
 st.header("Sales by Product SKU")
-st.write("This histogram shows the relationship between products (SKUs) and
-sales.")
+st.write("This histogram shows the relationship between products (SKUs) and sales.")
 # Aggregate data by SKU
 sku_sales = filtered_data.groupby('sku')['sales'].sum().reset_index()
 # Create a categorical plot for SKU vs Sales
@@ -172,8 +171,7 @@ plt.xticks(rotation=90) # Rotate x-axis labels for better readability
 st.pyplot(fig)
 # Boxplot of Numerical Variables
 st.header("Boxplot of Key Numerical Variables")
-st.write("This boxplot shows the distribution of key numerical variables in the
-filtered data.")
+st.write("This boxplot shows the distribution of key numerical variables in the filtered data.")
 # Select variables for boxplot
 boxplot_vars = ['price', 'sales', 'profit', 'unitsordered', 'cogs']
 boxplot_vars = [var for var in boxplot_vars if var in filtered_data.columns]
@@ -189,8 +187,7 @@ plt.xticks(rotation=45)
 st.pyplot(fig)
 # Pairplot of Selected Variables
 st.header("Pairplot of Key Variables")
-st.write("This pairplot shows the relationships between key variables. This may
-take a moment to render.")
+st.write("This pairplot shows the relationships between key variables.")
 # Select variables for pairplot (limited to avoid overplotting)
 pairplot_vars = ['price', 'sales', 'profit', 'unitsordered']
 pairplot_vars = [var for var in pairplot_vars if var in filtered_data.columns]
